@@ -5,26 +5,41 @@ import HowSection from "../components/Fragments/HowSection";
 import PartnerSection from "../components/Fragments/PartnerSection";
 import TechSection from "../components/Fragments/TechSection";
 import TestimonialSection from "../components/Fragments/TestimonialSection";
+import FadeUp from "../components/Elements/FadeUp";
 
 const HomePage = () => {
   return (
     <>
       <div id="about">
-        <HeroSection />
-        <PartnerSection />
+        <FadeUp>
+          <HeroSection />
+        </FadeUp>
+        <FadeUp delay={150}>
+          <PartnerSection />
+        </FadeUp>
       </div>
       <div id="how-it-works">
-        <HowSection />
+        <FadeUp delay={200}>
+          <HowSection />
+        </FadeUp>
       </div>
-      <TechSection />
+      <FadeUp delay={200}>
+        <TechSection />
+      </FadeUp>
       <div id="benefit">
-        <BenefitSection />
+        <FadeUp delay={200}>
+          <BenefitSection />
+        </FadeUp>
       </div>
       <div id="testimonials">
-        <TestimonialSection />
+        <FadeUp delay={200}>
+          <TestimonialSection />
+        </FadeUp>
       </div>
       <div id="faqs">
-        <FaqSection />
+        <FadeUp delay={200}>
+          <FaqSection />
+        </FadeUp>
       </div>
     </>
   );

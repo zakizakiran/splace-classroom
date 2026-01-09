@@ -2,6 +2,7 @@ import { useState, useRef } from "react";
 import Badges from "../Elements/Badges";
 import Card from "../Elements/Card";
 import SectionLayout from "../Layouts/SectionLayout";
+import FadeUp from "../Elements/FadeUp";
 
 import UploadUI from "../../assets/images/Upload.png";
 import AIPreview from "../../assets/images/AI.png";
@@ -78,14 +79,20 @@ const HowSection = () => {
 
   return (
     <SectionLayout>
-      <Badges text="How Does it Work?" />
-      <h1 className="mt-8 text-2xl font-bold leading-tight lg:text-3xl">
-        Streamline Your Teaching Workflow
-      </h1>
-      <p className="mt-4 mb-8 max-w-xl px-4 text-base leading-relaxed text-black-lighter sm:text-lg md:max-w-2xl md:text-xl lg:mt-8 lg:max-w-3xl">
-        A simple and efficient workflow designed to support modern learning, no
-        complex setup, no technical barriers.
-      </p>
+      <FadeUp>
+        <Badges text="How Does it Work?" />
+      </FadeUp>
+      <FadeUp delay={100}>
+        <h1 className="mt-8 text-2xl font-bold leading-tight lg:text-3xl">
+          Streamline Your Teaching Workflow
+        </h1>
+      </FadeUp>
+      <FadeUp delay={200}>
+        <p className="mt-4 mb-8 max-w-xl px-4 text-base leading-relaxed text-black-lighter sm:text-lg md:max-w-2xl md:text-xl lg:mt-8 lg:max-w-3xl">
+          A simple and efficient workflow designed to support modern learning,
+          no complex setup, no technical barriers.
+        </p>
+      </FadeUp>
       <div className="mb-8 h-1 w-8 rounded-full bg-primary" />
       <div className="sm:hidden w-full">
         <div

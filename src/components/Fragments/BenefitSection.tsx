@@ -10,6 +10,7 @@ import {
 } from "../Elements/BenefitIcons/Icons";
 import BenefitImage from "../../assets/images/LaptopHand.png";
 import SectionLayout from "../Layouts/SectionLayout";
+import FadeUp from "../Elements/FadeUp";
 
 const benefits = [
   {
@@ -59,30 +60,34 @@ const BenefitSection = () => {
         <div className="mb-8 lg:mb-0 h-1 w-8 rounded-full mx-auto bg-primary" />
       </SectionLayout>
       <div className="relative overflow-hidden mx-auto flex flex-col-reverse lg:flex-row pb-12 lg:pt-20 lg:pb-20 max-w-7xl px-6 sm:px-8 lg:px-12 items-center justify-center gap-8 lg:gap-16">
-        <div className="flex-1 w-full lg:max-w-lg flex flex-col items-center lg:items-start">
+        <FadeUp className="flex-1 w-full lg:max-w-lg flex flex-col items-center lg:items-start">
           <div className="space-y-6 mb-8 w-full">
             {benefits.map((benefit, index) => (
-              <BenefitItem
-                key={index}
-                icon={benefit.icon}
-                title={benefit.title}
-                description={benefit.description}
-              />
+              <FadeUp key={index} delay={index * 100}>
+                <BenefitItem
+                  icon={benefit.icon}
+                  title={benefit.title}
+                  description={benefit.description}
+                />
+              </FadeUp>
             ))}
           </div>
 
           <Button className="bg-primary w-full lg:max-w-fit hover:bg-primary-dark text-white px-8 py-3">
             Try Now!
           </Button>
-        </div>
+        </FadeUp>
 
-        <div className="flex-1 w-full lg:max-w-md flex justify-center">
+        <FadeUp
+          delay={200}
+          className="flex-1 w-full lg:max-w-md flex justify-center"
+        >
           <img
             src={BenefitImage}
             alt="Learning benefits illustration"
             className="w-full h-auto object-contain rounded-3xl"
           />
-        </div>
+        </FadeUp>
       </div>
     </>
   );
