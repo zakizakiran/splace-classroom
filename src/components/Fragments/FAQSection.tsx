@@ -70,7 +70,13 @@ const FAQSection: React.FC = () => {
               ready to answer your questions and help you get started
             </p>
           </div>
-          <Button className="mt-8 lg:mt-0 bg-white text-primary hover:bg-grey-light px-5 py-4 hover:bg-slate-200 transition-colors duration-300">
+          <Button
+            as="a"
+            href="mailto:classroomsplace@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-8 lg:mt-0 bg-white text-primary hover:bg-grey-light px-5 py-4 hover:bg-slate-200 transition-colors duration-300"
+          >
             Get in Touch
           </Button>
         </Card>

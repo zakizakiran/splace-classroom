@@ -34,6 +34,10 @@ const HeroSection = () => {
         </FadeUp>
         <FadeUp delay={400}>
           <Button
+            as="a"
+            href="http://103.155.224.67:8080/login/index.php"
+            target="_blank"
+            rel="noopener noreferrer"
             className="mt-10 text-base lg:text-xl bg-primary text-white hover:bg-primary-dark py-4 px-6 lg:py-5 lg:px-8"
             iconPosition="right"
             icon={ArrowRight}

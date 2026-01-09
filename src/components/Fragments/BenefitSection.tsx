@@ -73,7 +73,13 @@ const BenefitSection = () => {
             ))}
           </div>
 
-          <Button className="bg-primary w-full lg:max-w-fit hover:bg-primary-dark text-white px-8 py-3">
+          <Button
+            as="a"
+            href="http://103.155.224.67:8080/login/index.php"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-primary w-full lg:max-w-fit hover:bg-primary-dark text-white px-8 py-3"
+          >
             Try Now!
           </Button>
         </FadeUp>
