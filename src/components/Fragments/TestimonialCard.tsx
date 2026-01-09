@@ -27,6 +27,19 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
   name,
   role,
 }) => {
+  const getInitials = (fullName: string) => {
+    return fullName
+      .split(" ")
+      .map((n) => n[0])
+      .join("")
+      .toUpperCase()
+      .slice(0, 2);
+  };
+
+  const isColorCode = (str: string) => {
+    return str.startsWith("#") || str.startsWith("rgb");
+  };
+
   return (
     <Card className="bg-white p-6 flex flex-col h-full hover:shadow-lg transition-shadow duration-300 cursor-pointer">
       <div className="flex items-start justify-between mb-4">
@@ -45,11 +58,22 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
       </p>
 
       <div className="flex items-center gap-3">
-        <img
-          src={avatar}
-          alt={name}
-          className="w-12 h-12 rounded-full object-cover"
-        />
+        {isColorCode(avatar) ? (
+          <div
+            className="w-12 h-12 rounded-full flex items-center justify-center text-white font-semibold text-sm"
+            style={{
+              backgroundColor: avatar,
+            }}
+          >
+            {getInitials(name)}
+          </div>
+        ) : (
+          <img
+            src={avatar}
+            alt={name}
+            className="w-12 h-12 rounded-full object-cover"
+          />
+        )}
         <div>
           <h4 className="font-bold text-black text-sm">{name}</h4>
           <p className="text-xs text-black-lighter">{role}</p>

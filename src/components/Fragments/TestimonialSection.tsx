@@ -1,6 +1,5 @@
 import SectionLayout from "../Layouts/SectionLayout";
 import TestimonialCard from "./TestimonialCard";
-import AvatarPlaceholder from "../../assets/images/LogoIcon.png";
 import Badges from "../Elements/Badges";
 
 const testimonials = [
@@ -9,7 +8,7 @@ const testimonials = [
     rating: 5,
     comment:
       "Splace Classroom has transformed how I create course materials. The AI-powered quiz generation saves me hours every week, and my students love the interactive chatbot that helps them study anytime.",
-    avatar: AvatarPlaceholder,
+    avatar: "#8b5cf6",
     name: "Siti Cahyaningrum",
     role: "Computer Science Lecturer",
   },
@@ -18,7 +17,7 @@ const testimonials = [
     rating: 5,
     comment:
       "As a lecturer, I appreciate how seamlessly Splace integrates with our existing LMS. The AI understands our course content perfectly and provides accurate, context-aware responses to students.",
-    avatar: AvatarPlaceholder,
+    avatar: "#3b82f6",
     name: "Ahmad Subroto",
     role: "Engineering Lecturer",
   },
@@ -27,7 +26,7 @@ const testimonials = [
     rating: 5,
     comment:
       "The accessibility features are outstanding! My visually impaired students can now access image-based content through descriptive text. Splace truly makes education inclusive for everyone.",
-    avatar: AvatarPlaceholder,
+    avatar: "#10b981",
     name: "Rina Wijaya",
     role: "Special Education Teacher",
   },
@@ -36,7 +35,7 @@ const testimonials = [
     rating: 5,
     comment:
       "Splace Classroom has made learning so much easier for me. I can ask questions anytime through the chatbot and get instant answers based on our actual course materials. It's like having a tutor available 24/7!",
-    avatar: AvatarPlaceholder,
+    avatar: "#f59e0b",
     name: "Budi Santoso",
     role: "University Student",
   },
@@ -45,7 +44,7 @@ const testimonials = [
     rating: 5,
     comment:
       "I love how the AI chatbot keeps me focused on the course content. Unlike searching online where I get distracted, this only gives me answers from what we're actually learning. My grades have improved significantly!",
-    avatar: AvatarPlaceholder,
+    avatar: "#ec4899",
     name: "Dewi Lestari",
     role: "College Student",
   },
@@ -54,7 +53,7 @@ const testimonials = [
     rating: 5,
     comment:
       "Managing multiple courses used to be overwhelming, but Splace makes it effortless. The automated quiz creation and smart content organization help me focus more on teaching and less on admin work.",
-    avatar: AvatarPlaceholder,
+    avatar: "#14b8a6",
     name: "Bambang Sutopo",
     role: "Department Head",
   },
